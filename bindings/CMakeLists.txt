@@ -11,9 +11,9 @@ target_link_libraries(pyroptlib
 target_include_directories(pyroptlib
     PRIVATE
         ${PROJECT_SOURCE_DIR}/pybind11
-        ${PROJECT_SOURCE_DIR}/src
-        ${PROJECT_SOURCE_DIR}/src/cwrapper/blas
-        ${PROJECT_SOURCE_DIR}/src/cwrapper/lapack
+        ${PROJECT_SOURCE_DIR}/ROPTLIB
+        ${PROJECT_SOURCE_DIR}/ROPTLIB/cwrapper/blas
+        ${PROJECT_SOURCE_DIR}/ROPTLIB/cwrapper/lapack
 )
 
 add_custom_command(TARGET pyroptlib POST_BUILD

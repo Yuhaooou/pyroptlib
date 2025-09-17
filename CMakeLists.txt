@@ -9,7 +9,7 @@ find_package(BLAS REQUIRED)
 find_package(FFTW3 REQUIRED)
 add_definitions(-DROPTLIB_WITH_FFTW=1)
 
-add_subdirectory(src)
+add_subdirectory(ROPTLIB)
 
 target_link_libraries(roptlib PUBLIC ${BLAS_LIBRARIES})
 target_link_libraries(roptlib PUBLIC ${FFTW3_LIBRARIES})
