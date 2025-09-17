@@ -8,15 +8,15 @@ target_link_libraries(pyroptlib
         pybind11::module
 )
 
-# 包含头文件目录
 target_include_directories(pyroptlib
     PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/..
-        ${CMAKE_CURRENT_SOURCE_DIR}/../cwrapper/blas
-        ${CMAKE_CURRENT_SOURCE_DIR}/../cwrapper/lapack
+        ${PROJECT_SOURCE_DIR}/pybind11
+        ${PROJECT_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/src/cwrapper/blas
+        ${PROJECT_SOURCE_DIR}/src/cwrapper/lapack
 )
 
 add_custom_command(TARGET pyroptlib POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:pyroptlib> ${CMAKE_CURRENT_SOURCE_DIR}/..
+    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:pyroptlib> ${PROJECT_SOURCE_DIR}
     COMMENT "Copying generated Python module to project root directory"
 )

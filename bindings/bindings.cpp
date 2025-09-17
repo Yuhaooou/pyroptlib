@@ -1,5 +1,5 @@
 // File: python/bindings.cpp
-#include "pybind11/pybind11.h"
+#include <pybind11/pybind11.h>
 #include "cpptest.cpp"
 #include "manifolds/element.cpp"
 
