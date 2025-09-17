@@ -110,7 +110,7 @@ This is the global head file. Every file in ROPTLIB will include this file.
 #include <map>
 #include <string>
 
-#include <string.h> // 提供strcmp等C风格字符串函数
+#include <string.h> // for strcmp
 
 typedef std::map<std::string, realdp> PARAMSMAP;
 
